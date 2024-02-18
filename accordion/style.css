@@ -1,0 +1,43 @@
+.accordion {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.accordion-button {
+    background: rgb(254, 226, 254);
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.accordion-button:after {
+    content: '\002B';
+    /* Plus character */
+    color: #777;
+    float: right;
+    margin-left: 5px;
+
+}
+
+.accordion-button.active:after {
+    content: "\2212";
+    /* Minus character */
+}
+
+.accordion-content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.accordion-item:not(:last-child) {
+    border-bottom: 1px solid #e0e0e0;
+}
